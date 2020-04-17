@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Get Fit</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/signUp.css">
+</head>
+
+<body>
+
+  <div class="main-w3layouts wrapper">
+    <h1>Creative SignUp Form</h1>
+    <div class="main-agileinfo">
+      <div class="agileits-top">
+        <form action="/signup" method="post">
+          <label>Email</label>
+          <input class="form-control" type="text" name="email">
+          <label>First Name</label>
+          <input class="form-control" type="text" name="firstName">
+          <label>Last Name</label>
+          <input class="form-control" type="text" name="lastName">
+          <label>Password</label>
+          <input class="form-control" type="password" name="password">
+          <label>Weigth</label>
+          <input class="form-control" type="number" name="weight">
+          <label>Height feet</label>
+          <!-- <input class="form-control" type="text" name="height"> -->
+          <select class="form-control" type="number" name="heightFeet">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="5">6</option>
+            <option value="6">7</option>
+          </select>
+          <label>Height inches</label>
+          <!-- <input class="form-control" type="text" name="height"> -->
+          <select class="form-control" type="number" name="heightInches">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+          </select>
+          <label>Age</label>
+          <input class="form-control" type="number" name="age">
+          <input class="form-control" name="goalWeight" type="hidden" value="0">
+          <input class="form-control" name="goalCalories" type="hidden" value="0">
+          <input class="form-control" name="caloriesLeft" type="hidden" value="0">
+
+
+
+          <div class="wthree-text">
+            <div class="clear"> </div>
+          </div>
+          <input type="submit" class="btn btn-warning btn-lg" value="SIGNUP">
+        </form>
+        <a href="/"><button class="btn btn-warning btn-lg">BACK</button></a>
+
+      </div>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log Your Meals</title>
+  <style media="screen">
+    body {
+      background: url("img/meal.png")left top / cover no-repeat;
+    }
+  </style>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<h1><%= user.local.firstName%> <%= user.local.lastName%> Meals</h1>
+<h2 id="caloriesADayH1">1,000 Calories a Day</h2>
+<h2 id="calorieCount"></h2>
+<h2 id="calorieCountHit"></h2>
+
+
+
+<body>
+  <section id="mealInfo">
+    <form action="/enterMeal" method="POST">
+      <input type="date" name="date" placeholder="enter date">
+      <input type="text" name="meal" placeholder="enter meal name">
+      <input type="number" name="calories" placeholder="calories">
+      <input type="hidden" name="userId" value="<%= user._id %>">
+      <button type="submit">submit</button>
+    </form>
+    <% for(let i=0; i<meals.length; i++) { %>
+    <ul id="listOfMeals">
+      <li><%= meals[i].date %></li>
+      <li><%= meals[i].meal %></li>
+      <li class='calories'><%= meals[i].calories %></li>
+      <button class='deleteMeal'>DELETE</button>
+      <div data-id="<%= meals[i]._id%>"></div>
+    </ul>
+    <% } %>
+  </section>
+
+
+
+
+  <a href='/profile'>
+    <h3>BACK</h3>
+  </a>
+
+
+  <script type="text/javascript" src="meals.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Get Fit</title>
+  <link rel="stylesheet" href="css/logIn.css">
+</head>
+
+<body>
+  <div class="login-page">
+    <div class="form">
+      <form class="register-form">
+        <input type="text" placeholder="name" />
+        <input type="password" class="form-control" placeholder="password" />
+        <input type="text" class="form-control" placeholder="email address" />
+        <button>create</button>
+        <p class="message">Already registered? <a type="submit">Sign In</a></p>
+        <p>Need an account? <a href="/signup">Signup</a></p>
+      </form>
+      <form action="/login" class="login-form" method="post">
+        <input type="text" class="form-control" name="email" placeholder="email address" />
+        <input type="password" class="form-control" name="password" placeholder="password" />
+        <button type="submit" class="btn btn-warning btn-lg">login</button>
+
+      </form>
+      <a href="/"><button class="btn btn-warning btn-lg">BACK</button></a>
+
+    </div>
+  </div>
+
+
+</body>
+
+</html>

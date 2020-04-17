@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Get Fit</title>
+  <style media="screen">
+    body {
+      background: url("img/test.png")left top / cover no-repeat;
+    }
+  </style>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <section>
+    <h1>PROFILE</h1>
+    <a href='/logout'><span>LOG OUT</span></a>
+    <% if(user.local.email) { %>
+    <h2><%= user.local.firstName %></h2>
+    <p id="userWeight">Weight: <%= user.local.weight %></p>
+    <span>Height: <%= user.local.heightFeet %></span>
+    <span>,<%= user.local.heightInches %></span>
+    <p>Age: <%= user.local.age %></p>
+    <% } %>
+
+
+  </section>
+
+
+  <h2>Submit Your Goal Weight</h2>
+
+  <!-- trying to get value from input to update user database on goalWeight -->
+  <input type="number" name="goalWeight" placeholder="goal weight" id="goalWeight">
+  <button id="submitWeight">SUBMIT</button>
+  <span id="Weight"><%= user.local.goalWeight %></span>
+
+  <% if(user.local.goalWeight) { %>
+  <p id="daystoloose">If you consume 1000 calories a day it will take you <%= user.local.numberOfDaysToGetToGoalWeight %> days to get to your goal weight.</p>
+  <% } %>
+
+  <p class="shape">We believe fitness should be accessible to everyone, everywhere, regardless of income or access to a gym. With professional workouts and healthy recipes, you’ll have everything you need to reach your personal fitness goals – for
+    free!</p>
+
+
+  <a href="/meals">Log a Meal</a>
+
+
+
+  <div class="fixed-navbar">
+
+    <div class="navbar-lockup">
+
+      <div class="logo">
+
+        <a href=""><img src="img/logo.png" alt="Fitness"></a>
+
+      </div>
+
+      <p class="move"><a href="/">HOME -</a><a href="/unlink/local" class="btn btn-default"> - Unlink</a></p>
+
+      <script type="text/javascript" src="profile.js">
+
+      </script>
+</body>
+
+</html>
