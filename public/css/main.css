@@ -467,6 +467,7 @@ h1, h2, h3, h4, h5, h6 {
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+  font-size: large
 }
 
 abbr[title],
@@ -2082,6 +2083,7 @@ img::-moz-selection {
 
 body {
   -webkit-tap-highlight-color: #FFF498;
+  font-size: medium;
 }
 
 header {
@@ -3154,12 +3156,13 @@ footer {
 }
 
 .shape {
-  margin-top: 25px;
+  margin-top: 55px;
   border-radius: 25px;
   border: 2px solid #fd634e;
-  padding: 20px;
+  padding: 50px;
   width: 500px;
-  height: 150px;
+  height: 350px;
+  font-size: x-large;
 }
 
 .fixed-navbar {
